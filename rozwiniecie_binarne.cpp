@@ -4,6 +4,7 @@ using namespace std;
 
 string rozwiniecieBinarne(int licznik, int mianownik)
 {
+    // Funkcja zwraca rozwinięcie ułamka w systemie binarnym jako string
     // licznik < mianownik
     // NWD(licznik, mianownik) == 1
     // mianownik == 2^n
