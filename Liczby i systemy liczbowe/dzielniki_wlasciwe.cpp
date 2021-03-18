@@ -17,15 +17,13 @@ int main()
     cin >> liczba;
 
     // Szukanie dzielników
-    while (dzielnik * dzielnik < liczba)
+    for (dzielnik = 2; dzielnik*dzielnik < liczba; dzielnik++)
     {
         if (liczba % dzielnik == 0)
         {
             dzielniki.push_back(dzielnik);
             dzielniki.push_back(liczba / dzielnik);
         }
-
-        dzielnik++;
     }
 
     if (dzielnik * dzielnik == liczba)
