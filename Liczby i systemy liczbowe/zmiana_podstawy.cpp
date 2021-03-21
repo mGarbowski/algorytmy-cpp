@@ -51,17 +51,49 @@ int oblicz(string liczba, int podstawa)
     return wynik;
 }
 
+int oblicz2(string liczba, int podstawa)
+{
+    int wynik = 0;
+    for (int i = 0; i < liczba.size(); i++)
+    {
+        char cyfra = liczba[i];
+        if (cyfra >= '0' && cyfra <= '9')
+        {
+            wynik = wynik * podstawa + (cyfra - '0');
+        }
+        else if (cyfra >= 'A' && cyfra <= 'Z')
+        {
+            wynik = wynik * podstawa + (cyfra - 'A' + 10);
+        }
+
+    }
+    return wynik;
+}
+
 int main()
 {
+    string liczba_str, operacja;
     int liczba; 
     int podstawa;
     
-    cout << "Liczba ";
-    cin >> liczba;
-    cout << "Podstawa ";
-    cin >> podstawa;
+    cout << "Obliczyc wartosc czy zmienic podstawe? [o/z]";
+    cin >> operacja;
 
-    cout << zmienPodstawe(liczba, podstawa);
-    
+    if (operacja == "o")
+    {
+        cout << "Liczba = ";
+        cin >> liczba_str;
+        cout << "Podstawa = ";
+        cin >> podstawa;
+        cout << oblicz2(liczba_str, podstawa);
+    }
+    else if (operacja == "z")
+    {
+        cout << "Liczba ";
+        cin >> liczba;
+        cout << "Podstawa ";
+        cin >> podstawa;
+        cout << zmienPodstawe(liczba, podstawa); 
+    }
     return 0;
 }
