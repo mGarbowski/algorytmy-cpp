@@ -7,7 +7,7 @@ string zmienPodstawe(int liczba, int podstawa)
 {
     // Zwraca string będący reprezentacją liczby dla podanej podstawy
     // Maksymalna podstawa - 16
-    
+
     if (podstawa > 16)
         return "Niepoprawna podstawa";
 
@@ -53,7 +53,7 @@ int oblicz(string liczba, int podstawa)
 
 int main()
 {
-    string liczba; 
+    int liczba; 
     int podstawa;
     
     cout << "Liczba ";
@@ -61,7 +61,7 @@ int main()
     cout << "Podstawa ";
     cin >> podstawa;
 
-    cout << oblicz(liczba, podstawa);
+    cout << zmienPodstawe(liczba, podstawa);
     
     return 0;
 }
