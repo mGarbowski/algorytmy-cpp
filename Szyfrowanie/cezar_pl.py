@@ -23,26 +23,28 @@ def encrypt_line(line, key=3):
     return ''.join(encrypted)
 
 
+# def decrypt_line(line, key=3):
+#     def decrypt_char(char, key):
+#         n_chars = len(PL_LOWER)
+
+#         if PL_LOWER.find(char) != -1:
+#             idx = PL_LOWER.find(char)
+#             new_idx = (idx - key) % n_chars
+#             return PL_LOWER[new_idx]
+
+#         elif PL_UPPER.find(char) != -1:
+#             idx = PL_UPPER.find(char)
+#             new_idx = (idx - key) % n_chars
+#             return PL_UPPER[new_idx]
+
+#         else:
+#             return char
+
+#     decrypted = [decrypt_char(c, key) for c in line]
+#     return ''.join(decrypted)
+
 def decrypt_line(line, key=3):
-    def decrypt_char(char, key):
-        n_chars = len(PL_LOWER)
-
-        if PL_LOWER.find(char) != -1:
-            idx = PL_LOWER.find(char)
-            new_idx = (idx - key) % n_chars
-            return PL_LOWER[new_idx]
-
-        elif PL_UPPER.find(char) != -1:
-            idx = PL_UPPER.find(char)
-            new_idx = (idx - key) % n_chars
-            return PL_UPPER[new_idx]
-
-        else:
-            return char
-
-    decrypted = [decrypt_char(c, key) for c in line]
-    return ''.join(decrypted)
-
+    return encrypt_line(line, -key)
 
 key = int(input('Key: ').strip())
 
