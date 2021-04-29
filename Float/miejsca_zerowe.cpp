@@ -1,9 +1,8 @@
 #include <iostream>
-#include <cmath>
 
 using namespace std;
 
-// Porownywanie z wartoscia epsilon za miast z 0 dla unikniecia bledow numerycznych
+// Porownywanie z wartoscia epsilon zamiast z 0 dla unikniecia bledow numerycznych
 const float EPS = 0.000001;
 
 float f(float x)
