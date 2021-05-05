@@ -64,6 +64,19 @@ bool czySparowane(string wejscie)
     }
 }
 
+int test()
+{
+    if (czySparowane("()") != true) return 1;
+    if (czySparowane("([{}])") != true) return 2;
+    if (czySparowane("(") != false) return 3;
+    if (czySparowane("][") != false) return 4;
+    if (czySparowane("{{[]})") != false) return 5;
+    if (czySparowane("") != true) return 6;
+    if (czySparowane("}") != false) return 7;
+
+    return 0;
+}
+
 int main()
 {
     string wejscie;
