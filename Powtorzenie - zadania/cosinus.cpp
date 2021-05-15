@@ -4,17 +4,17 @@ using namespace std;
 
 double cosinus(double x)
 {
-    int sign = 1;
-    int factorial = 1;
+    double sign = 1;
+    double factorial = 1;
     double power = 1.f;
     double result = 0.f;
 
-    for (int i = 0; i < 10; i++)
+    for (int i = 1; i < 10; i++)
     {
         result += sign * power / factorial;
 
         sign = sign * -1;
-        factorial = factorial * (2*i+1) * (2*i+2);
+        factorial = factorial * (2*i) * (2*i - 1);
         power = power * x * x;
     }
 
