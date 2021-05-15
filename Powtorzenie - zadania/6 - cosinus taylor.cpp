@@ -2,7 +2,7 @@
 
 using namespace std;
 
-const int N_WYRAZOW = 6;
+const int N_WYRAZOW = 10;
 int silnia[2*N_WYRAZOW];
 
 float cosinus(float x)
