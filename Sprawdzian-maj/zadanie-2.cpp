@@ -10,6 +10,9 @@ float cube(float x)
 
 float cubeRoot(float x)
 {
+    if (x < 0)
+        return -1;
+        
     float low = 0;
     float high = x;
     float mid = (low + high) / 2;
@@ -34,6 +37,6 @@ int main()
     cout << "x = ";
     cin >> x;
     cout << "Pierwiastek 3 stopnia z x wynosi: " << cubeRoot(x);
-    
+
     return 0;
 }
