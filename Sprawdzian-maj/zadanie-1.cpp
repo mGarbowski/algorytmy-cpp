@@ -31,7 +31,7 @@ int main()
     // dla r = 1
     // Pole = pi
 
-    float pi = integrate(-1, 1, 1000);
+    float pi = integrate(-1, 1, 10000);
     cout << "Pi = " << pi;
 
     return 0;
